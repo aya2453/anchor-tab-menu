@@ -16,6 +16,7 @@
 		80BBDE312510D9FF002AB061 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BBDE2F2510D9FF002AB061 /* LaunchScreen.storyboard */; };
 		80BBDE3C2510D9FF002AB061 /* UICollectionViewTabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE3B2510D9FF002AB061 /* UICollectionViewTabTests.swift */; };
 		80BBDE472510D9FF002AB061 /* UICollectionViewTabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE462510D9FF002AB061 /* UICollectionViewTabUITests.swift */; };
+		80BBDE552510DF50002AB061 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE542510DF50002AB061 /* MenuCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		80BBDE422510D9FF002AB061 /* UICollectionViewTabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UICollectionViewTabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		80BBDE462510D9FF002AB061 /* UICollectionViewTabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewTabUITests.swift; sourceTree = "<group>"; };
 		80BBDE482510D9FF002AB061 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80BBDE542510DF50002AB061 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				80BBDE2F2510D9FF002AB061 /* LaunchScreen.storyboard */,
 				80BBDE322510D9FF002AB061 /* Info.plist */,
 				80BBDE2A2510D9FA002AB061 /* UICollectionViewTab.xcdatamodeld */,
+				80BBDE542510DF50002AB061 /* MenuCollectionViewCell.swift */,
 			);
 			path = UICollectionViewTab;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80BBDE2C2510D9FA002AB061 /* UICollectionViewTab.xcdatamodeld in Sources */,
+				80BBDE552510DF50002AB061 /* MenuCollectionViewCell.swift in Sources */,
 				80BBDE262510D9FA002AB061 /* ViewController.swift in Sources */,
 				80BBDE222510D9FA002AB061 /* AppDelegate.swift in Sources */,
 				80BBDE242510D9FA002AB061 /* SceneDelegate.swift in Sources */,
