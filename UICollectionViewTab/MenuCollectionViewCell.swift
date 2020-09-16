@@ -15,16 +15,16 @@ final class MenuCollectionViewCell: UICollectionViewCell {
     
     func setUp(name: String, isSelected: Bool) {
         titleLabel.text = name
-        if isSelected {
-            DispatchQueue.main.async {
-                UIView.animate(withDuration: 0.3) {
-                    self.indicatorView.backgroundColor = .red
-                    self.layoutIfNeeded()
-                }
-            }
-        } else {
-            
-        }
+//        if isSelected {
+//            DispatchQueue.main.async {
+//                UIView.animate(withDuration: 0.3) {
+//                    self.indicatorView.backgroundColor = .red
+//                    self.layoutIfNeeded()
+//                }
+//            }
+//        } else {
+//            
+//        }
     }
     
     override init(frame: CGRect) {
@@ -39,14 +39,14 @@ final class MenuCollectionViewCell: UICollectionViewCell {
     
     
     func setupIndicatorView() {
-        indicatorView = UIView()
-        addSubview(indicatorView)
-        indicatorView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            indicatorView.heightAnchor.constraint(equalToConstant: 3),
-            indicatorView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            indicatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
+//        indicatorView = UIView()
+//        addSubview(indicatorView)
+//        indicatorView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            indicatorView.heightAnchor.constraint(equalToConstant: 3),
+//            indicatorView.widthAnchor.constraint(equalTo: self.widthAnchor),
+//            indicatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+//        ])
     }
 }
 

@@ -19,11 +19,18 @@ class ViewController: UIViewController {
             collectionView.delegate = self
         }
     }
-    let titles = ["Item1Item1", "Item2", "Item3Item3Item3", "Item4Item4Item4", "Item5"]
-
+    private let titles = ["Item1Item1", "Item2", "Item3Item3Item3", "Item4Item4Item4", "Item5"]
+    
+    private var indicator: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // TODO:初期表示時に0番目のアイテムを選択状態にする
+        let indicator = UIView(frame: CGRect(x: 0, y: collectionView.bounds.height - 3, width: 0, height: 3))
+        indicator.layer.zPosition = 9999
+        indicator.backgroundColor = .systemPink
+        self.indicator = indicator
+        collectionView.addSubview(indicator)
     }
 
 
@@ -40,6 +47,29 @@ extension ViewController: UICollectionViewDataSource {
             cell.setUp(name: titles[indexPath.row], isSelected: indexPath.row == 0)
         }
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let targetItemFrame = collectionView.layoutAttributesForItem(at: indexPath)!.frame
+        print(targetItemFrame)
+        // BarViewのvisibleなwidthの半分から選択したアイテムの幅半分を引いて選択アイテムをセンタリングするxの値を求める
+        let centerFrame = (collectionView.bounds.width / 2) - (targetItemFrame.width / 2)
+        // スクロールした際のx軸最大値
+        // スクリーンからはみ出した部分 = スクロールできる最大値
+        let maxOffSetX = collectionView.contentSize.width - collectionView.bounds.width + collectionView.contentInset.right
+        let minOffSetX = collectionView.contentInset.left
+        // 選択したアイテムのxからセンタリングまでのxを引いて真ん中にくるようにする
+        var contentOffset = CGPoint(x: (-centerFrame) + targetItemFrame.origin.x, y: 0.0)
+        // スクロールがされない
+        contentOffset.x = max(minOffSetX, min(contentOffset.x, maxOffSetX))
+        print(centerFrame)
+        collectionView.setContentOffset(contentOffset, animated: true)
+        var indicatorFrame = indicator.frame
+        indicatorFrame.size.width = targetItemFrame.size.width
+        indicatorFrame.origin.x = targetItemFrame.origin.x
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.indicator.frame = indicatorFrame
+        }
     }
 }
 
@@ -77,7 +107,8 @@ final class CustomLayout: UICollectionViewFlowLayout {
     }
     
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
-        print(proposedContentOffset.x)
+//        print(proposedContentOffset.x)
+//        print(collectionView?.contentOffset)
         return proposedContentOffset
     }
 }
