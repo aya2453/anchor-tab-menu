@@ -84,22 +84,40 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Collection View Tab Table View Controller-->
         <scene sceneID="Sju-kp-XLh">
             <objects>
-                <tableViewController id="vpO-GS-gOl" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T2B-Hd-5Q0">
+                <tableViewController id="vpO-GS-gOl" customClass="UICollectionViewTabTableViewController" customModule="UICollectionViewTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="T2B-Hd-5Q0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Pkf-Mn-Sez">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UICollectionViewTabCell" id="Pkf-Mn-Sez" customClass="UICollectionViewTabCell" customModule="UICollectionViewTab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="232"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pkf-Mn-Sez" id="gU0-v4-k7F">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9FQ-Jl-Fba">
+                                            <rect key="frame" x="16" y="16" width="382" height="200"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="1tn-hx-h4y"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9FQ-Jl-Fba" firstAttribute="top" secondItem="gU0-v4-k7F" secondAttribute="top" constant="16" id="2YZ-1U-Her"/>
+                                        <constraint firstAttribute="bottom" secondItem="9FQ-Jl-Fba" secondAttribute="bottom" constant="16" id="Jrv-qn-7pN"/>
+                                        <constraint firstItem="9FQ-Jl-Fba" firstAttribute="leading" secondItem="gU0-v4-k7F" secondAttribute="leading" constant="16" id="nhR-GQ-8FL"/>
+                                        <constraint firstAttribute="trailing" secondItem="9FQ-Jl-Fba" secondAttribute="trailing" constant="16" id="zte-wT-ki5"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bgView" destination="9FQ-Jl-Fba" id="iAy-KU-wdt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
