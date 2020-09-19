@@ -18,6 +18,10 @@ final class UICollectionViewTabTableViewController: UITableViewController {
     
     let items: KeyValuePairs = ["Item1Item1": 2, "Item2": 3, "Item3Item3Item3" :1, "Item4Item4Item4": 2, "Item5" : 2]
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.register(UINib(nibName: "UICollectionViewTabCell", bundle: nil), forCellReuseIdentifier: "UICollectionViewTabCell")
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         items.count

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c6D-JH-lde">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Oa0-hq-HfC">
+            <objects>
+                <viewController id="c6D-JH-lde" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RoI-Xt-o8o"/>
+                        <viewControllerLayoutGuide type="bottom" id="pSN-Mj-tyG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ir2-qu-4gj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sD2-3x-WlK">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tsz-Ip-zaD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="753"/>
+                                        <connections>
+                                            <segue destination="LN6-uv-4vT" kind="embed" id="Czf-J3-TEw"/>
+                                        </connections>
+                                    </containerView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SSo-X7-M3H">
+                                        <rect key="frame" x="0.0" y="753" width="414" height="65"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="BdX-Cv-lOC"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sD2-3x-WlK" firstAttribute="top" secondItem="RoI-Xt-o8o" secondAttribute="bottom" id="602-QH-8mH"/>
+                            <constraint firstItem="pSN-Mj-tyG" firstAttribute="top" secondItem="sD2-3x-WlK" secondAttribute="bottom" id="BlO-6x-Zl7"/>
+                            <constraint firstItem="sD2-3x-WlK" firstAttribute="leading" secondItem="Ir2-qu-4gj" secondAttribute="leading" id="FBh-Wf-zj2"/>
+                            <constraint firstAttribute="trailing" secondItem="sD2-3x-WlK" secondAttribute="trailing" id="L0x-Za-w85"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kpn-af-mjv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130.43478260869566" y="38.839285714285715"/>
+        </scene>
+        <!--Anchor Tab Menu Sample View Controller-->
+        <scene sceneID="wDB-2m-abv">
+            <objects>
+                <viewController id="LN6-uv-4vT" customClass="AnchorTabMenuSampleViewController" customModule="UICollectionViewTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fyf-iX-CmT"/>
+                        <viewControllerLayoutGuide type="bottom" id="KcV-9r-yeR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j36-i6-r6f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="753"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNe-oo-WsC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="39"/>
+        </scene>
+    </scenes>
+</document>

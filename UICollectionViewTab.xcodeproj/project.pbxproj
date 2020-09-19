@@ -19,6 +19,13 @@
 		80BBDE552510DF50002AB061 /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE542510DF50002AB061 /* MenuCollectionViewCell.swift */; };
 		80BBDE592512CFB7002AB061 /* UICollectionViewTabTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE582512CFB7002AB061 /* UICollectionViewTabTableViewController.swift */; };
 		80BBDE5B2512D40A002AB061 /* UICollectionViewTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE5A2512D40A002AB061 /* UICollectionViewTabCell.swift */; };
+		80BBDE612515D890002AB061 /* AnchorTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE602515D890002AB061 /* AnchorTabViewController.swift */; };
+		80BBDE632515D8E1002AB061 /* AnchorTabMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BBDE622515D8E1002AB061 /* AnchorTabMenu.storyboard */; };
+		80BBDE652515EF30002AB061 /* AnchorTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE642515EF30002AB061 /* AnchorTabBarView.swift */; };
+		80BBDE672515FB84002AB061 /* MenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BBDE662515FB84002AB061 /* MenuCollectionViewCell.xib */; };
+		80BBDE692516064A002AB061 /* AnchorTabMenuSampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BBDE682516064A002AB061 /* AnchorTabMenuSampleViewController.swift */; };
+		80BBDE6B25160921002AB061 /* UICollectionViewTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80BBDE6A25160921002AB061 /* UICollectionViewTabCell.xib */; };
+		80BBDE6D2516297E002AB061 /* AnchorTabMenuContent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80BBDE6C2516297E002AB061 /* AnchorTabMenuContent.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +64,13 @@
 		80BBDE542510DF50002AB061 /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		80BBDE582512CFB7002AB061 /* UICollectionViewTabTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewTabTableViewController.swift; sourceTree = "<group>"; };
 		80BBDE5A2512D40A002AB061 /* UICollectionViewTabCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewTabCell.swift; sourceTree = "<group>"; };
+		80BBDE602515D890002AB061 /* AnchorTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorTabViewController.swift; sourceTree = "<group>"; };
+		80BBDE622515D8E1002AB061 /* AnchorTabMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnchorTabMenu.storyboard; sourceTree = "<group>"; };
+		80BBDE642515EF30002AB061 /* AnchorTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorTabBarView.swift; sourceTree = "<group>"; };
+		80BBDE662515FB84002AB061 /* MenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCollectionViewCell.xib; sourceTree = "<group>"; };
+		80BBDE682516064A002AB061 /* AnchorTabMenuSampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorTabMenuSampleViewController.swift; sourceTree = "<group>"; };
+		80BBDE6A25160921002AB061 /* UICollectionViewTabCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UICollectionViewTabCell.xib; sourceTree = "<group>"; };
+		80BBDE6C2516297E002AB061 /* AnchorTabMenuContent.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnchorTabMenuContent.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +121,7 @@
 		80BBDE202510D9FA002AB061 /* UICollectionViewTab */ = {
 			isa = PBXGroup;
 			children = (
+				80BBDE6A25160921002AB061 /* UICollectionViewTabCell.xib */,
 				80BBDE212510D9FA002AB061 /* AppDelegate.swift */,
 				80BBDE232510D9FA002AB061 /* SceneDelegate.swift */,
 				80BBDE252510D9FA002AB061 /* ViewController.swift */,
@@ -118,6 +133,12 @@
 				80BBDE542510DF50002AB061 /* MenuCollectionViewCell.swift */,
 				80BBDE582512CFB7002AB061 /* UICollectionViewTabTableViewController.swift */,
 				80BBDE5A2512D40A002AB061 /* UICollectionViewTabCell.swift */,
+				80BBDE602515D890002AB061 /* AnchorTabViewController.swift */,
+				80BBDE622515D8E1002AB061 /* AnchorTabMenu.storyboard */,
+				80BBDE642515EF30002AB061 /* AnchorTabBarView.swift */,
+				80BBDE662515FB84002AB061 /* MenuCollectionViewCell.xib */,
+				80BBDE682516064A002AB061 /* AnchorTabMenuSampleViewController.swift */,
+				80BBDE6C2516297E002AB061 /* AnchorTabMenuContent.storyboard */,
 			);
 			path = UICollectionViewTab;
 			sourceTree = "<group>";
@@ -244,8 +265,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80BBDE6D2516297E002AB061 /* AnchorTabMenuContent.storyboard in Resources */,
+				80BBDE6B25160921002AB061 /* UICollectionViewTabCell.xib in Resources */,
 				80BBDE312510D9FF002AB061 /* LaunchScreen.storyboard in Resources */,
 				80BBDE2E2510D9FF002AB061 /* Assets.xcassets in Resources */,
+				80BBDE672515FB84002AB061 /* MenuCollectionViewCell.xib in Resources */,
+				80BBDE632515D8E1002AB061 /* AnchorTabMenu.storyboard in Resources */,
 				80BBDE292510D9FA002AB061 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +302,9 @@
 				80BBDE262510D9FA002AB061 /* ViewController.swift in Sources */,
 				80BBDE222510D9FA002AB061 /* AppDelegate.swift in Sources */,
 				80BBDE5B2512D40A002AB061 /* UICollectionViewTabCell.swift in Sources */,
+				80BBDE652515EF30002AB061 /* AnchorTabBarView.swift in Sources */,
+				80BBDE612515D890002AB061 /* AnchorTabViewController.swift in Sources */,
+				80BBDE692516064A002AB061 /* AnchorTabMenuSampleViewController.swift in Sources */,
 				80BBDE242510D9FA002AB061 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

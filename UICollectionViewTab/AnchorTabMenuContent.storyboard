@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gJx-51-BEB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Tab Table View Controller-->
+        <scene sceneID="1kS-Wg-I56">
+            <objects>
+                <tableViewController restorationIdentifier="UICollectionViewTabTableViewController" storyboardIdentifier="UICollectionViewTabTableViewController" id="gJx-51-BEB" customClass="UICollectionViewTabTableViewController" customModule="UICollectionViewTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="UsG-I8-bRL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="UICollectionViewTabCell" id="SMh-uD-k0m" customClass="UICollectionViewTabCell" customModule="UICollectionViewTab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="232"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SMh-uD-k0m" id="hlS-R8-gjW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="232"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPd-Et-lUL">
+                                            <rect key="frame" x="16" y="16" width="382" height="200"/>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="lq2-so-z93"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bPd-Et-lUL" firstAttribute="leading" secondItem="hlS-R8-gjW" secondAttribute="leading" constant="16" id="BcF-i2-5eX"/>
+                                        <constraint firstItem="bPd-Et-lUL" firstAttribute="top" secondItem="hlS-R8-gjW" secondAttribute="top" constant="16" id="K1w-1C-vfP"/>
+                                        <constraint firstAttribute="trailing" secondItem="bPd-Et-lUL" secondAttribute="trailing" constant="16" id="OcG-oq-Ggy"/>
+                                        <constraint firstAttribute="bottom" secondItem="bPd-Et-lUL" secondAttribute="bottom" constant="16" id="mcU-Rc-n4n"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bgView" destination="bPd-Et-lUL" id="Pem-NW-2xZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gJx-51-BEB" id="3I9-1B-hks"/>
+                            <outlet property="delegate" destination="gJx-51-BEB" id="rdY-wd-CAU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cR8-BP-NFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="945" y="120"/>
+        </scene>
+    </scenes>
+</document>
