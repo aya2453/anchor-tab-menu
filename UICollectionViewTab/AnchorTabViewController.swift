@@ -12,7 +12,17 @@ open class AnchorTabViewController: UIViewController {
 
     private let container = UIStackView()
     private var bar: AnchorTabBarView!
-    private var contentViewController: UICollectionViewTabTableViewController!
+    var contentViewController: UICollectionViewTabTableViewController! {
+        didSet {
+            addChild(contentViewController)
+            contentViewController.view.translatesAutoresizingMaskIntoConstraints = false
+            container.addArrangedSubview(contentViewController.view)
+            contentViewController.didMove(toParent: self)
+            contentViewController.viewControllerDelegate = bar
+        }
+    }
+    
+    @IBOutlet private weak var contentView: UIView!
     
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +43,14 @@ open class AnchorTabViewController: UIViewController {
         container.axis = .vertical
         container.alignment = .fill
         container.accessibilityIdentifier = "コンテナー"
-        view.addSubview(container)
+        contentView.addSubview(container)
         container.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate(
             [
-                container.topAnchor.constraint(equalTo: view.topAnchor),
-                container.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                container.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                container.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+                container.topAnchor.constraint(equalTo: contentView.topAnchor),
+                container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+                container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+                container.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
             ]
         )
     }
@@ -52,15 +62,6 @@ open class AnchorTabViewController: UIViewController {
         NSLayoutConstraint.activate([bar.heightAnchor.constraint(equalToConstant: 64)])
         container.addArrangedSubview(bar)
         bar.scrollDelegate = self
-    }
-    
-    func addContent(tableViewController controller: UICollectionViewTabTableViewController) {
-        addChild(controller)
-        controller.view.translatesAutoresizingMaskIntoConstraints = false
-        container.addArrangedSubview(controller.view)
-        controller.didMove(toParent: self)
-        controller.viewControllerDelegate = bar
-        contentViewController = controller
     }
 }
 

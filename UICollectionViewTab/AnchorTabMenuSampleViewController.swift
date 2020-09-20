@@ -14,7 +14,7 @@ final class AnchorTabMenuSampleViewController: AnchorTabViewController {
         super.viewDidLoad()
         let sb = UIStoryboard(name: "AnchorTabMenuContent", bundle: nil)
         let controller = sb.instantiateViewController(identifier: "UICollectionViewTabTableViewController")
-        addContent(tableViewController: controller as! UICollectionViewTabTableViewController)
+        contentViewController = controller as! UICollectionViewTabTableViewController
     }
 }
 
